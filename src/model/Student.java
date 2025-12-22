@@ -1,4 +1,4 @@
 package model;
 
-public class Student {
+public class Student implements Person{
 }
