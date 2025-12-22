@@ -1,13 +1,13 @@
 package model;
 
-public class Student implements Person{
+public class Student extends Person{
 
     private static int nextId = 1;
 
     private int id;
     private String name;
     private String surname;
-    private Double gpa;
+    private double gpa;
 
     public Student(){
         this.id = nextId++;
