@@ -2,18 +2,18 @@ package model;
 
 public abstract Person extends Payable {
 
-    private static int nextId = 1;
+    private static int genId = 1;
 
     private int id;
     private String name;
     private String surname;
 
     public Person(){
-        this.id = nextId++;
+        this.id = genId++;
     }
 
     public Person(String name , String surname){
-        this.id = nextId++;
+        this();
         setName(name);
         setSurname(surname);
     }

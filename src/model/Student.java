@@ -1,8 +1,8 @@
 package model;
 
-public class Student extends Person{
+public class Student extends Person, implements Comparable<Student>{
 
-    private static int nextId = 1;
+    private static int genId = 1;
 
     private int id;
     private String name;
@@ -10,11 +10,11 @@ public class Student extends Person{
     private double gpa;
 
     public Student(){
-        this.id = nextId++;
+        this.id = genId++;
     }
 
     public Student(String name , String surname , double gpa){
-        this.id = nextId++;
+        this();
         setName(name);
         setSurname(surname);
         setGpa(gpa);
@@ -46,6 +46,13 @@ public class Student extends Person{
 
     public void setGpa(double gpa){
         this.gpa = gpa;
+    }
+
+    @Override
+    public int compare(Student anotherStudent){
+        if(gpa > anotherStudent.gpa)return 1;
+        if(gpa < anotherStudent.gpa)return -1;
+        else return 0;
     }
 
     @Override
