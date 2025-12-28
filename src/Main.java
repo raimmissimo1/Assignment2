@@ -6,7 +6,9 @@ import java.util.Collection;
 import java.util.Comparator;
 
 public class Main {
+
     public static void main(String[] args){
+
         ArrayList<Student> list = new ArrayList<>();
 
         list.add(new Student());

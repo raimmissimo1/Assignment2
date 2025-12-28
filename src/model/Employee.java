@@ -1,6 +1,6 @@
 package model;
 
-public class Employee implements Person{
+public class Employee extends Person{
 
     private static int nextId = 1;
 

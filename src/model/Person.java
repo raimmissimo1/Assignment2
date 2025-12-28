@@ -1,6 +1,6 @@
 package model;
 
-public abstract Person extends Payable {
+public Person implements Payable , Comparable<Person> {
 
     private static int genId = 1;
 

@@ -1,6 +1,6 @@
 package model;
 
-public interface class Payable {
+public interface Payable {
 
     double getPaymentAmount();
 

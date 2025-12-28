@@ -1,6 +1,6 @@
 package model;
 
-public class Student extends Person, implements Comparable<Student>{
+public class Student extends Person {
 
     private static int genId = 1;
 
@@ -49,10 +49,8 @@ public class Student extends Person, implements Comparable<Student>{
     }
 
     @Override
-    public int compare(Student anotherStudent){
-        if(gpa > anotherStudent.gpa)return 1;
-        if(gpa < anotherStudent.gpa)return -1;
-        else return 0;
+    public int compareTo(Person other){
+        return double.compare(this.getPaymentAmount() , other.getPaymentAmount());
     }
 
     @Override
