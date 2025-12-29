@@ -1,28 +1,25 @@
-package model;
+package models;
 
-public abstract Person implements Payable , Comparable<Person> {
+public abstract class Person implements Payable, Comparable<Person> {
 
     private static int genId = 1;
 
-    private int id;
+    private final int id;
     private String name;
     private String surname;
 
     public Person(){
         this.id = genId++;
-
     }
 
     public Person(String name , String surname){
         this();
         setName(name);
         setSurname(surname);
-
     }
 
     public int getId(){
         return id;
-
     }
 
     public String getName(){
@@ -56,7 +53,6 @@ public abstract Person implements Payable , Comparable<Person> {
     @Override
     public String toString(){
         return id + " " + name + " " + surname;
-
     }
 
 }
