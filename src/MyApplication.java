@@ -2,10 +2,9 @@ import model.Student;
 import models .*;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Comparator;
 
-public class Main {
+public class MyApplication {
 
     public static void main(String[] args){
 
